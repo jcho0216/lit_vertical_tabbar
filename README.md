@@ -1,4 +1,4 @@
-# lit_vertical_tabbar
+# sliver_vertical_tabbar
 
 A new Flutter project.
 
