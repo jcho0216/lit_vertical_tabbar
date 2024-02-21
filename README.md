@@ -1,16 +1,29 @@
 # sliver_vertical_tabbar
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Widget that Automatically controlls TabBar index on ListView scroll.
+ 
+This widget is using ListView to render items for better performance.
+  
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+https://github.com/jcho0216/sliver_vertical_tabbar/assets/67269455/63a96a61-db77-4d35-a4d0-077670e3cd4d
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
+```
+SliverVerticalTabBar(
+  backgroundColor: Colors.black87,
+  padding: const EdgeInsets.symmetric(vertical: 24),
+  moveTabToLastIndexOnScrollEnd: true,
+
+  /// tabs length must be the same length as children length
+  tabs: [...],
+  children: [...],
+  divider: Divider(),
+)
+```
+
+Feel free to request for a feature :)
