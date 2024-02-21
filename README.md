@@ -2,13 +2,11 @@
 
 ## Getting Started
 
-### Widget that Automatically controlls TabBar index on ListView scroll.
+### Widget that provides automated TabBar changes when ListView is scrolled.
  
-This widget is using ListView to render items for better performance.
-  
 <br/>
 
-https://github.com/jcho0216/sliver_vertical_tabbar/assets/67269455/63a96a61-db77-4d35-a4d0-077670e3cd4d
+https://github.com/jcho0216/lit_vertical_tabbar/assets/67269455/8ee1f4a7-7c5d-4c0b-9595-5c9be2f38177
 
 <br/>
 
