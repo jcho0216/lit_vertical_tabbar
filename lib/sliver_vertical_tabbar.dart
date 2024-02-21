@@ -14,6 +14,7 @@ class SliverVerticalTabBar extends StatefulWidget {
     this.divider,
     this.physics,
     this.padding,
+    this.backgroundColor,
   })  : assert(tabs.length == children.length, '*** tabs length must be the same length as children length ***'),
         super(key: key);
 
@@ -29,6 +30,8 @@ class SliverVerticalTabBar extends StatefulWidget {
 
   final ScrollPhysics? physics;
   final EdgeInsets? padding;
+
+  final Color? backgroundColor;
 
   @override
   State<StatefulWidget> createState() => _SliverVerticalTabBarState();
@@ -139,28 +142,31 @@ class _SliverVerticalTabBarState extends State<SliverVerticalTabBar> with Single
             onTap: onTabChange,
           ),
           Expanded(
-            child: ListView.separated(
-              padding: widget.padding ?? EdgeInsets.zero,
-              controller: _autoScrollController,
-              physics: widget.physics,
-              key: _listViewKey,
-              itemBuilder: (context, index) {
-                return AutoScrollTag(
-                  key: ValueKey(index),
-                  controller: _autoScrollController,
-                  index: index,
-                  child: widget.children[index],
-                );
-              },
-              separatorBuilder: (context, index) {
-                _dividerKeys[index] = GlobalKey<_SliverVerticalTabBarState>();
+            child: Container(
+              color: widget.backgroundColor,
+              child: ListView.separated(
+                padding: widget.padding ?? EdgeInsets.zero,
+                controller: _autoScrollController,
+                physics: widget.physics,
+                key: _listViewKey,
+                itemBuilder: (context, index) {
+                  return AutoScrollTag(
+                    key: ValueKey(index),
+                    controller: _autoScrollController,
+                    index: index,
+                    child: widget.children[index],
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  _dividerKeys[index] = GlobalKey<_SliverVerticalTabBarState>();
 
-                return SizedBox(
-                  key: _dividerKeys[index],
-                  child: widget.divider ?? const SizedBox(),
-                );
-              },
-              itemCount: widget.children.length,
+                  return SizedBox(
+                    key: _dividerKeys[index],
+                    child: widget.divider ?? const SizedBox(),
+                  );
+                },
+                itemCount: widget.children.length,
+              ),
             ),
           ),
         ],

@@ -1,5 +1,5 @@
 name: sliver_vertical_tabbar
-description: "A new Flutter project."
+description: "A vertical scroll tab bar using sliver, which provides automated tab bar changes when content is scrolled."
 repository: "https://github.com/jcho0216/sliver_vertical_tabbar"
 
 version: 0.0.0+1
