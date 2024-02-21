@@ -1,8 +1,8 @@
-name: sliver_vertical_tabbar
-description: "A vertical scroll tab bar using sliver, which provides automated tab bar changes when content is scrolled."
-repository: "https://github.com/jcho0216/sliver_vertical_tabbar"
+name: lit_vertical_tabbar
+description: "Widget that provides automated TabBar changes when ListView is scrolled. (This widget is using ListView to render items for better performance)"
+repository: "https://github.com/jcho0216/lit_vertical_tabbar"
 
-version: 0.0.0+2
+version: 0.0.1
 
 environment:
   sdk: '>=2.12.3 <4.0.0'

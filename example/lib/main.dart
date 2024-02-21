@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sliver_vertical_tabbar/sliver_vertical_tabbar.dart';
+import 'package:lit_vertical_tabbar/lit_vertical_tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(color: Colors.black45, fontWeight: FontWeight.w700),
           ),
         ),
-        body: SliverVerticalTabBar(
+        body: LitVerticalTabBar(
           backgroundColor: Colors.black87,
           padding: const EdgeInsets.symmetric(vertical: 24),
           moveTabToLastIndexOnScrollEnd: true,

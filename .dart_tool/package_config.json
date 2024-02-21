@@ -146,13 +146,13 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "sliver_vertical_tabbar",
+      "name": "lit_vertical_tabbar",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-02-21T09:05:06.917344Z",
+  "generated": "2024-02-21T09:49:19.932761Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

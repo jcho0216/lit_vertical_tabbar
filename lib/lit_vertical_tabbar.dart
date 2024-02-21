@@ -3,8 +3,8 @@ library sliver_vertical_tabbar;
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-class SliverVerticalTabBar extends StatefulWidget {
-  const SliverVerticalTabBar({
+class LitVerticalTabBar extends StatefulWidget {
+  const LitVerticalTabBar({
     Key? key,
     this.moveTabToLastIndexOnScrollEnd = true,
     required this.tabs,
@@ -15,6 +15,7 @@ class SliverVerticalTabBar extends StatefulWidget {
     this.physics,
     this.padding,
     this.backgroundColor,
+    this.onTabChanged,
   })  : assert(tabs.length == children.length, '*** tabs length must be the same length as children length ***'),
         super(key: key);
 
@@ -24,6 +25,7 @@ class SliverVerticalTabBar extends StatefulWidget {
   final List<Widget> tabs;
   final TabAlignment? tabAlignment;
   final bool isScrollable;
+  final Function(int)? onTabChanged;
 
   final List<Widget> children;
   final Widget? divider;
@@ -34,16 +36,16 @@ class SliverVerticalTabBar extends StatefulWidget {
   final Color? backgroundColor;
 
   @override
-  State<StatefulWidget> createState() => _SliverVerticalTabBarState();
+  State<StatefulWidget> createState() => _LitVerticalTabBarState();
 }
 
-class _SliverVerticalTabBarState extends State<SliverVerticalTabBar> with SingleTickerProviderStateMixin {
+class _LitVerticalTabBarState extends State<LitVerticalTabBar> with SingleTickerProviderStateMixin {
   late final AutoScrollController _autoScrollController;
   late final TabController _tabController;
 
   bool _pauseNotification = false;
 
-  final _listViewKey = GlobalKey<_SliverVerticalTabBarState>();
+  final _listViewKey = GlobalKey<_LitVerticalTabBarState>();
   final Map<int, dynamic> _dividerKeys = {};
 
   @override
@@ -61,7 +63,7 @@ class _SliverVerticalTabBarState extends State<SliverVerticalTabBar> with Single
   }
 
   /// get Rect information from GlobalKey
-  Rect? _getRectFromKey(GlobalKey<_SliverVerticalTabBarState> globalKey) {
+  Rect? _getRectFromKey(GlobalKey<_LitVerticalTabBarState> globalKey) {
     final object = globalKey.currentContext?.findRenderObject();
 
     final translation = object?.getTransformTo(null).getTranslation();
@@ -158,7 +160,7 @@ class _SliverVerticalTabBarState extends State<SliverVerticalTabBar> with Single
                   );
                 },
                 separatorBuilder: (context, index) {
-                  _dividerKeys[index] = GlobalKey<_SliverVerticalTabBarState>();
+                  _dividerKeys[index] = GlobalKey<_LitVerticalTabBarState>();
 
                   return SizedBox(
                     key: _dividerKeys[index],

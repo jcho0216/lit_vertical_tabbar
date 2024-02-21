@@ -1,4 +1,4 @@
-# sliver_vertical_tabbar
+# lit_vertical_tabbar
 
 ## Getting Started
 
