@@ -83,6 +83,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  lit_vertical_tabbar:
+    dependency: "direct main"
+    description:
+      name: lit_vertical_tabbar
+      sha256: c8b0f4b9da9b0e95e5076ec0b57e0d38b26970c6f2fb1e4a6dc962cdd4d795b6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   matcher:
     dependency: transitive
     description:
@@ -128,14 +136,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  sliver_vertical_tabbar:
-    dependency: "direct main"
-    description:
-      name: sliver_vertical_tabbar
-      sha256: "358cf0846ef4aff00c2cd003ee5cf06b10b18a49c7a8a2a1339844e2b83e7946"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.0+2"
   source_span:
     dependency: transitive
     description:
