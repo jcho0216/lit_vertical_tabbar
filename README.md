@@ -12,7 +12,7 @@ https://github.com/jcho0216/lit_vertical_tabbar/assets/67269455/8ee1f4a7-7c5d-4c
 
 ## Usage
 ```
-SliverVerticalTabBar(
+LitVerticalTabBar(
   backgroundColor: Colors.black87,
   padding: const EdgeInsets.symmetric(vertical: 24),
   moveTabToLastIndexOnScrollEnd: true,
