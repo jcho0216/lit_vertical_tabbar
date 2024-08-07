@@ -1,13 +1,13 @@
 library lit_vertical_tabbar;
 
 import 'package:flutter/material.dart';
+import 'package:lit_vertical_tabbar/lit_element_model.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class LitVerticalTabBar extends StatefulWidget {
   const LitVerticalTabBar({
     Key? key,
     this.moveTabToLastIndexOnScrollEnd = true,
-    required this.tabs,
     this.tabAlignment,
     this.isScrollable = true,
     required this.children,
@@ -16,18 +16,16 @@ class LitVerticalTabBar extends StatefulWidget {
     this.padding,
     this.backgroundColor,
     this.onTabChanged,
-  })  : assert(tabs.length == children.length, '*** tabs length must be the same length as children length ***'),
-        super(key: key);
+  }) : super(key: key);
 
-  /// wheter to move the tab to the last one on scroll end
+  /// whether to move the tab to the last one on scroll end
   final bool moveTabToLastIndexOnScrollEnd;
 
-  final List<Widget> tabs;
   final TabAlignment? tabAlignment;
   final bool isScrollable;
   final Function(int)? onTabChanged;
 
-  final List<Widget> children;
+  final List<LitElementModel> children;
   final Widget? divider;
 
   final ScrollPhysics? physics;
@@ -51,7 +49,7 @@ class _LitVerticalTabBarState extends State<LitVerticalTabBar> with SingleTicker
   @override
   void initState() {
     _autoScrollController = AutoScrollController();
-    _tabController = TabController(length: widget.tabs.length, vsync: this);
+    _tabController = TabController(length: widget.children.length, vsync: this);
     super.initState();
   }
 
@@ -140,7 +138,7 @@ class _LitVerticalTabBarState extends State<LitVerticalTabBar> with SingleTicker
             tabAlignment: widget.tabAlignment ?? TabAlignment.start,
             isScrollable: widget.isScrollable,
             controller: _tabController,
-            tabs: widget.tabs,
+            tabs: widget.children.map((e) => Tab(text: e.tabName)).toList(),
             onTap: onTabChange,
           ),
           Expanded(
@@ -156,7 +154,7 @@ class _LitVerticalTabBarState extends State<LitVerticalTabBar> with SingleTicker
                     key: ValueKey(index),
                     controller: _autoScrollController,
                     index: index,
-                    child: widget.children[index],
+                    child: widget.children[index].child,
                   );
                 },
                 separatorBuilder: (context, index) {
