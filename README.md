@@ -4,13 +4,11 @@
  
 <br/>
 
-![The example app running in iOS](https://github.com/flutter/plugins/blob/main/packages/video_player/video_player/doc/demo_ipod.gif?raw=true)
+### Demo
 
- https://github.com/jcho0216/lit_vertical_tabbar/assets/67269455/8ee1f4a7-7c5d-4c0b-9595-5c9be2f38177
+![The example app running in iOS](https://github.com/jcho0216/lit_vertical_tabbar/assets/67269455/8ee1f4a7-7c5d-4c0b-9595-5c9be2f38177)
 
 <br/>
-
-### Demo
 
 
 ## Usage
