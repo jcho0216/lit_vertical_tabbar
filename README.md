@@ -2,7 +2,7 @@
 
 Widget that provides automated TabBar changes when ListView is scrolled.
 
-### Demo
+## Demo
 
 <p align="center" width="100%">
 <video src="https://github.com/user-attachments/assets/49bc6755-4d2c-4e3a-90b3-e4e28f853abc" width="80%" controls></video>
