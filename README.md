@@ -1,15 +1,13 @@
 # lit_vertical_tabbar
 
-``` Widget that provides automated TabBar changes when ListView is scrolled. ``` 
- 
-<br/>
+Widget that provides automated TabBar changes when ListView is scrolled.
 
 ### Demo
 
-![The example app running in iOS](https://github.com/jcho0216/lit_vertical_tabbar/assets/67269455/8ee1f4a7-7c5d-4c0b-9595-5c9be2f38177)
-
+<p align="center" width="100%">
+<video src="https://github.com/user-attachments/assets/49bc6755-4d2c-4e3a-90b3-e4e28f853abc" width="80%" controls></video>
+</p>
 <br/>
-
 
 ## Usage
 ```
@@ -21,5 +19,3 @@ LitVerticalTabBar(
   divider: Divider(),
 )
 ```
-
-Feel free to request for a feature :)
